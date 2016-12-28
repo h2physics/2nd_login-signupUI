@@ -2,9 +2,13 @@
     <string name="app_name">LoginUI</string>
     <string name="action_settings">Settings</string>
 
+    <string name="email">Email</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Have an account?</string>
     <string name="sign_up">Sign up</string>
     <string name="sign_in">Sign in</string>
+    <string name="or">or</string>
+    <string name="label_name">Huhulo</string>
 </resources>
