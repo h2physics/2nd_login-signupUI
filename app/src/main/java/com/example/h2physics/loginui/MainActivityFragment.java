@@ -174,6 +174,8 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             public void run() {
                 signUpFormLayout.setVisibility(View.INVISIBLE);
                 signInFormLayout.setVisibility(View.VISIBLE);
+                textViewSignInLabelUsername.setVisibility(View.INVISIBLE);
+                textViewSignInLabelPassword.setVisibility(View.INVISIBLE);
             }
         }, 300);
     }
@@ -186,6 +188,9 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             public void run() {
                 signInFormLayout.setVisibility(View.INVISIBLE);
                 signUpFormLayout.setVisibility(View.VISIBLE);
+                textViewSignUpLabelUsername.setVisibility(View.INVISIBLE);
+                textViewSignUpLabelEmail.setVisibility(View.INVISIBLE);
+                textViewSignUpLabelPassword.setVisibility(View.INVISIBLE);
             }
         }, 300);
     }
