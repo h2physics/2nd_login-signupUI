@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -20,7 +21,7 @@ import com.example.h2physics.loginui.Class.Typefaces;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment implements View.OnClickListener{
+public class MainActivityFragment extends Fragment implements View.OnClickListener, View.OnTouchListener{
     RelativeLayout relativeLayoutLabel;
     RelativeLayout relativeLayoutLogin;
 
@@ -43,6 +44,13 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     EditText editTextPasswordSignUp;
     Button buttonSignUp;
     TextView textViewSignUp;
+
+    TextView textViewSignInLabelUsername;
+    TextView textViewSignInLabelPassword;
+    TextView textViewSignUpLabelEmail;
+    TextView textViewSignUpLabelUsername;
+    TextView textViewSignUpLabelPassword;
+
 
     public MainActivityFragment() {
     }
@@ -88,10 +96,21 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         textViewSignUp = (TextView) rootView.findViewById(R.id.textView_signUp);
         textViewSignUp.setTypeface(Typefaces.get(getActivity(), "Comfortaa-Light.ttf"));
 
+        textViewSignInLabelUsername = (TextView) rootView.findViewById(R.id.textView_signIn_label_username);
+        textViewSignInLabelPassword = (TextView) rootView.findViewById(R.id.textView_signIn_label_password);
+        textViewSignUpLabelEmail = (TextView) rootView.findViewById(R.id.textView_signUp_label_email);
+        textViewSignUpLabelUsername = (TextView) rootView.findViewById(R.id.textView_signUp_label_username);
+        textViewSignUpLabelPassword = (TextView) rootView.findViewById(R.id.textView_signUp_label_password);
+
         buttonStartSignIn.setOnClickListener(this);
         buttonStartSignUp.setOnClickListener(this);
         textViewSignIn.setOnClickListener(this);
         textViewSignUp.setOnClickListener(this);
+        editTextUsername.setOnTouchListener(this);
+        editTextPassword.setOnTouchListener(this);
+        editTextEmailSignUp.setOnTouchListener(this);
+        editTextUsernameSignUp.setOnTouchListener(this);
+        editTextPasswordSignUp.setOnTouchListener(this);
 
         return rootView;
     }
@@ -197,4 +216,62 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             }
         }
     }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.editText_username:{
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:{
+                        textViewSignInLabelUsername.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                }
+                break;
+            }
+
+            case R.id.editText_password:{
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:{
+                        textViewSignInLabelPassword.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                }
+                break;
+            }
+
+            case R.id.editText_signUp_email:{
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:{
+                        textViewSignUpLabelEmail.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                }
+                break;
+            }
+
+            case R.id.editText_signUp_username:{
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:{
+                        textViewSignUpLabelUsername.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                }
+                break;
+            }
+
+            case R.id.editText_signUp_password:{
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:{
+                        textViewSignUpLabelPassword.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+        return false;
+    }
+
 }

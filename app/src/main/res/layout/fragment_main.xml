@@ -102,7 +102,8 @@
                     android:text="@string/username"
                     android:textColor="@color/colorViolet"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"/>
 
                 <EditText
                     android:id="@+id/editText_username"
@@ -111,8 +112,7 @@
                     android:singleLine="true"
                     android:background="@drawable/border_bottom_view"
                     android:layout_height="40dp"
-                    android:layout_width="match_parent"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_width="match_parent"/>
 
             </LinearLayout>
 
@@ -130,7 +130,8 @@
                     android:text="@string/password"
                     android:textColor="@color/colorViolet"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"/>
 
                 <EditText
                     android:id="@+id/editText_password"
@@ -139,8 +140,7 @@
                     android:singleLine="true"
                     android:background="@drawable/border_bottom_view"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"/>
+                    android:layout_height="40dp"/>
 
             </LinearLayout>
 
@@ -188,7 +188,8 @@
                     android:text="@string/email"
                     android:textColor="@color/colorViolet"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"/>
 
                 <EditText
                     android:id="@+id/editText_signUp_email"
@@ -217,7 +218,8 @@
                     android:text="@string/username"
                     android:textColor="@color/colorViolet"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"/>
 
                 <EditText
                     android:id="@+id/editText_signUp_username"
@@ -246,7 +248,8 @@
                     android:text="@string/password"
                     android:textColor="@color/colorViolet"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"/>
 
                 <EditText
                     android:id="@+id/editText_signUp_password"
@@ -284,87 +287,5 @@
         </android.support.percent.PercentRelativeLayout>
 
     </android.support.percent.PercentRelativeLayout>
-
-    <!--<android.support.percent.PercentRelativeLayout-->
-        <!--android:id="@+id/signUp_layout"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:visibility="invisible">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textView_label_in_signUpLayout"-->
-            <!--android:text="@string/label_name"-->
-            <!--android:textSize="30sp"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--app:layout_marginTopPercent="8%"-->
-            <!--android:visibility="invisible"/>-->
-
-        <!--<android.support.percent.PercentRelativeLayout-->
-            <!--android:id="@+id/signUp_form_layout"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="300dp"-->
-            <!--android:background="@color/colorWhite"-->
-            <!--app:layout_marginTopPercent="25%"-->
-            <!--android:visibility="invisible">-->
-
-            <!--<EditText-->
-                <!--android:id="@+id/editText_signUp_email"-->
-                <!--android:hint="@string/email"-->
-                <!--android:textColorHint="@color/colorBlack"-->
-                <!--android:singleLine="true"-->
-                <!--android:background="@drawable/border_bottom_view"-->
-                <!--app:layout_widthPercent="70%"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_centerHorizontal="true"/>-->
-
-            <!--<EditText-->
-                <!--android:id="@+id/editText_signUp_username"-->
-                <!--android:hint="@string/username"-->
-                <!--android:textColorHint="@color/colorBlack"-->
-                <!--android:singleLine="true"-->
-                <!--android:background="@drawable/border_bottom_view"-->
-                <!--app:layout_widthPercent="70%"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_below="@id/editText_signUp_email"-->
-                <!--android:layout_marginTop="10dp"/>-->
-
-            <!--<EditText-->
-                <!--android:id="@+id/editText_signUp_password"-->
-                <!--android:hint="@string/password"-->
-                <!--android:textColorHint="@color/colorBlack"-->
-                <!--android:singleLine="true"-->
-                <!--android:background="@drawable/border_bottom_view"-->
-                <!--app:layout_widthPercent="70%"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_below="@id/editText_signUp_username"-->
-                <!--android:layout_marginTop="10dp"/>-->
-
-            <!--<Button-->
-                <!--android:id="@+id/button_signUp"-->
-                <!--android:text="@string/sign_up"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_width="120dp"-->
-                <!--android:background="@drawable/rounded_view"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_below="@id/editText_signUp_password"-->
-                <!--android:layout_marginTop="20dp" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/textView_signUp"-->
-                <!--android:text="@string/have_account"-->
-                <!--android:textSize="25sp"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_alignParentBottom="true"/>-->
-
-        <!--</android.support.percent.PercentRelativeLayout>-->
-
-    <!--</android.support.percent.PercentRelativeLayout>-->
-
 
 </android.support.percent.PercentRelativeLayout>
